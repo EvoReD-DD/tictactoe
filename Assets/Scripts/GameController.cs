@@ -71,6 +71,13 @@ public class GameController : MonoBehaviour
         {
             GameOver();
         }
+       
+        ChangeSides();
+    }
+
+    void ChangeSides()
+    {
+        playerChoiseSide = (playerChoiseSide == "X") ? "O" : "X"; // Note: Capital Letters for "X" and "O"
     }
     void GameOver()
     {
