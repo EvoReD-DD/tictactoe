@@ -8,10 +8,11 @@ public class GameController : MonoBehaviour
     public Text[] buttonSpaceList;
     private string playerChoiseSide;
     public GameObject restart;
+    public GameObject chooseCanvass;
 
     void Awake()
     {
-        SetGameControllerReferenceOnButtons();
+       SetGameControllerReferenceOnButtons();
         
     }
     void SetGameControllerReferenceOnButtons()
@@ -20,16 +21,6 @@ public class GameController : MonoBehaviour
         {
             buttonSpaceList[i].GetComponentInParent<GridSpace>().SetGameControllerReference(this);
         }
-    }
-
-    public void ChooseSideO()
-    {
-        playerChoiseSide = "O";
-    }
-
-    public void ChooseSideX()
-    {
-        playerChoiseSide = "X";
     }
 
     public string GetPlayerSide()
